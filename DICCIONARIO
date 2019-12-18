@@ -1,0 +1,29 @@
+def traducir(diccionario):
+
+    input_usuario = input('Ingrese una frase: ')
+
+    while input_usuario != 'Quit':
+
+        traduccion = []
+
+        for palabra in input_usuario.split():
+
+            if palabra in diccionario.keys():
+
+                traduccion.append(diccionario[palabra])
+
+            else:
+
+                traduccion.append('____')
+
+        print(' '.join(traduccion))
+
+        input_usuario = input('Ingrese una frase: ')
+
+es_en = {'hola':'hello', 'es':'is', 'nombre':'name', 'rojo':'red', 'azul':'blue', 'anarrillo':'yellow', 'nergo':'black',
+
+'brujo':'witcher', 'mago':'witzar', 'manzana':'apple', 'computadora':'computer', 'casa':'house', 'ratos':'mouse', 'ciudad':'city', 
+
+'programación':'programming', 'universidad':'universty', 'edad':'age', 'ventana':'windows', 'perro':'dog', 'gato':'cat' }
+
+traducir(es_en)
